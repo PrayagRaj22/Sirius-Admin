@@ -10,20 +10,20 @@ The service focuses on **high-performance APIs, raw SQL database interactions, a
 
 ---
 
-# 🚀 Features
+# Features
 
-* ⚡ High-performance APIs built with FastAPI
-* 🗄️ Raw SQL queries (no ORM abstraction)
-* 🔄 Async database access using connection pooling
-* 🧩 Modular backend architecture
-* 📊 Admin data management APIs
-* 🐳 Containerization-ready structure
-* ☁️ Cloud deployment ready
-* 🔄 CI/CD friendly repository structure
+* High-performance APIs built with FastAPI
+* Raw SQL queries (no ORM abstraction)
+* Async database access using connection pooling
+* Modular backend architecture
+* Admin data management APIs
+* Containerization-ready structure
+* Cloud deployment ready
+* CI/CD friendly repository structure
 
 ---
 
-# 🧱 Tech Stack
+# Tech Stack
 
 ### Backend
 
@@ -46,7 +46,7 @@ The service focuses on **high-performance APIs, raw SQL database interactions, a
 
 ---
 
-# 🧩 Architecture Overview
+# Architecture Overview
 
 Sirius Admin is designed to operate as a **data administration microservice**. Authentication and authorization can be handled by a separate service or API gateway.
 
@@ -69,16 +69,16 @@ This design reflects **real-world microservice architecture patterns**.
 
 ---
 
-# ⚙️ Installation
+# Installation
 
-## 1️⃣ Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/your-username/sirius-admin.git
 cd sirius-admin
 ```
 
-## 2️⃣ Create Virtual Environment
+## Create Virtual Environment
 
 ```
 python -m venv venv
@@ -98,7 +98,7 @@ Windows
 venv\Scripts\activate
 ```
 
-## 3️⃣ Install Dependencies
+## Install Dependencies
 
 ```
 pip install -r requirements.txt
@@ -106,7 +106,7 @@ pip install -r requirements.txt
 
 ---
 
-# 🗄️ Database Setup
+# Database Setup
 
 Install and run **PostgreSQL** locally.
 
@@ -126,7 +126,7 @@ DATABASE_URL=postgresql://postgres:postgres@localhost:5432/sirius_admin
 
 ---
 
-# ▶️ Running the Application
+# Running the Application
 
 Start the API server using **Uvicorn**:
 
@@ -142,7 +142,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# 📜 Example API Endpoints
+# Example API Endpoints
 
 ### Users
 
@@ -162,7 +162,7 @@ GET /admin/audit-logs
 
 ---
 
-# 🧪 Running Tests
+# Running Tests
 
 Run the test suite:
 
@@ -172,7 +172,7 @@ pytest
 
 ---
 
-# 🐳 Docker (Planned)
+# Docker (Planned)
 
 The project is structured to support containerized deployment using **Docker**.
 
@@ -183,7 +183,7 @@ Example services:
 
 ---
 
-# ☁️ Cloud Deployment (Planned)
+# Cloud Deployment (Planned)
 
 The service can be deployed on modern cloud platforms such as:
 
@@ -205,7 +205,7 @@ PostgreSQL Database
 
 ---
 
-# 🎯 Project Goals
+# Project Goals
 
 Sirius Admin is designed as a **backend engineering and DevOps portfolio project** demonstrating:
 
@@ -217,18 +217,13 @@ Sirius Admin is designed as a **backend engineering and DevOps portfolio project
 
 ---
 
-# 📄 License
+# License
 
 This project is released under the MIT License.
 
 ---
 
-# 👨‍💻 Author
+# Author
 
 Developed as a **backend engineering and cloud-focused portfolio project**.
 
----
-
-If you want, I can now **enhance this README with badges, diagrams, and API examples** so it looks **top-tier on GitHub** and immediately impresses recruiters.
-
-Do you want me to do that next?
