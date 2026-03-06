@@ -1,0 +1,77 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: docker.io/library/postgres:latest
+
+    container_name: postgres_db
+
+    environment:
+      POSTGRES_USER: POSTGRES_USER
+      POSTGRES_PASSWORD: POSTGRES_PASSWORD
+      POSTGRES_DB: POSTGRES_DB
+
+    env_file:
+      - .env
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql
+
+    networks:
+      - pg_network
+
+  pgadmin:
+    image: dpage/pgadmin4 # Official pgAdmin image
+    container_name: pgadmin_container
+
+    restart: always
+
+    environment:
+      PGADMIN_DEFAULT_EMAIL: PGADMIN_DEFAULT_EMAIL # pgAdmin login email
+      PGADMIN_DEFAULT_PASSWORD: PGADMIN_DEFAULT_PASSWORD # pgAdmin login password
+
+    env_file:
+      - .env
+
+    ports:
+      - "8080:80" # Map port 8080 on the host to 80 in the container
+
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin # Persist pgAdmin configuration
+
+    networks:
+      - pg_network
+
+    depends_on:
+      - postgres # Ensure postgres starts first
+
+  backend:
+    build:
+      context: .
+      dockerfile: Docker/Dockerfile
+      
+    container_name: backend_container
+
+    ports:
+      - "8000:8000"
+
+    networks:
+      - pg_network
+
+    env_file:
+      - .env
+      
+    depends_on:
+      - postgres # Ensure postgres starts first
+      - pgadmin # Ensure pgAdmin starts first
+
+networks:
+  pg_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  pgadmin_data:
